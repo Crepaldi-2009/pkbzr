@@ -160,8 +160,8 @@ function startHand(){
     renderPlayerCards();
     renderCommunityCards();
     renderBots();
-
     updateUI();
+    startHand();
 
     messageBox.textContent =
         "Nova mão iniciada";
