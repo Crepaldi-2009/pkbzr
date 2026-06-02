@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
+<title>Texas Hold'em Pro</title>
+
+<meta name="theme-color" content="#114227">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Poker Pro">
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-bar">
+    <div class="bankroll">
+        💰 <span id="player-bankroll">10000</span>
+    </div>
+
+    <div class="pot">
+        🏆 Pote: <span id="pot-amount">0</span>
+    </div>
+</header>
+
+<main id="table">
+
+    <section id="bots-container">
+        <!-- Bots serão criados pelo JS -->
+    </section>
+
+    <section id="community-section">
+        <h3>Mesa</h3>
+        <div id="community-cards" class="cards-row"></div>
+    </section>
+
+    <section id="player-section">
+
+        <div id="player-cards" class="cards-row"></div>
+
+        <div id="action-panel">
+
+            <button id="btn-fold">
+                Fold
+            </button>
+
+            <button id="btn-check">
+                Check / Call
+            </button>
+
+            <button id="btn-raise">
+                Raise
+            </button>
+
+            <button id="btn-allin">
+                All-In
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+<div id="message-box">
+    Bem-vindo ao Texas Hold'em Pro
+</div>
+
+<script src="poker-engine.js"></script>
+<script src="ai.js"></script>
+<script src="game.js"></script>
+
+</body>
+</html>
