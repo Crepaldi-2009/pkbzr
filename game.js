@@ -1,14 +1,14 @@
-alert("game.js carregou");
+alert("1");
 let deck;
 let communityCards = [];
-
+alert("2");
 const player = {
     name: "Você",
     chips: 10000,
     cards: [],
     folded: false
 };
-
+alert("3");
 const potElement =
     document.getElementById("pot-amount");
 
