@@ -1,4 +1,3 @@
-
 let deck;
 let communityCards = [];
 
@@ -29,7 +28,7 @@ const messageBox =
 
 let stage = 0;
 let pot = 0;
-alert("5");
+
 function updateUI() {
 
     bankrollElement.textContent =
@@ -55,6 +54,7 @@ function createCard(card, hidden = false) {
         return div;
 
     }
+
     if(
         card.suit === "♥" ||
         card.suit === "♦"
@@ -109,14 +109,8 @@ function renderBots(){
         seat.classList.add("bot-seat");
 
         seat.innerHTML = `
-            <div class="bot-name">
-                ${bot.name}
-            </div>
-
-            <div class="bot-stack">
-                ${bot.chips}
-            </div>
-
+            <div class="bot-name">${bot.name}</div>
+            <div class="bot-stack">${bot.chips}</div>
             <div class="cards-row">
                 <div class="card back">🂠</div>
                 <div class="card back">🂠</div>
@@ -160,13 +154,7 @@ function startHand(){
     renderPlayerCards();
     renderCommunityCards();
     renderBots();
-updateUI();
-
-alert("ANTES START");
-
-startHand();
-
-alert("DEPOIS START");
+    updateUI();
 
     messageBox.textContent =
         "Nova mão iniciada";
@@ -245,16 +233,10 @@ function showdown(){
                 ...communityCards
             ]);
 
-        if(
-            result.rank >
-            bestRank
-        ){
+        if(result.rank > bestRank){
 
-            bestRank =
-                result.rank;
-
-            winner =
-                bot.name;
+            bestRank = result.rank;
+            winner = bot.name;
 
         }
 
@@ -267,7 +249,7 @@ function showdown(){
         messageBox.textContent =
             `🏆 Você venceu com ${playerResult.name}`;
 
-    }else{
+    } else {
 
         messageBox.textContent =
             `🤖 ${winner} venceu`;
@@ -335,6 +317,7 @@ document
 
 renderBots();
 updateUI();
+startHand();
 
 if(
     "serviceWorker" in navigator
@@ -351,4 +334,3 @@ if(
     );
 
 }
-
