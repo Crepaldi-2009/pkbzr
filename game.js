@@ -1,14 +1,14 @@
-alert("1");
+
 let deck;
 let communityCards = [];
-alert("2");
+
 const player = {
     name: "Você",
     chips: 10000,
     cards: [],
     folded: false
 };
-alert("3");
+
 const potElement =
     document.getElementById("pot-amount");
 
@@ -26,7 +26,7 @@ const botsContainer =
 
 const messageBox =
     document.getElementById("message-box");
-alert("4");
+
 let stage = 0;
 let pot = 0;
 alert("5");
@@ -39,7 +39,7 @@ function updateUI() {
         pot;
 
 }
-alert("6");
+
 function createCard(card, hidden = false) {
 
     const div =
@@ -55,7 +55,6 @@ function createCard(card, hidden = false) {
         return div;
 
     }
-alert("7");
     if(
         card.suit === "♥" ||
         card.suit === "♦"
@@ -161,8 +160,13 @@ function startHand(){
     renderPlayerCards();
     renderCommunityCards();
     renderBots();
-    updateUI();
-    startHand();
+updateUI();
+
+alert("ANTES START");
+
+startHand();
+
+alert("DEPOIS START");
 
     messageBox.textContent =
         "Nova mão iniciada";
@@ -347,4 +351,4 @@ if(
     );
 
 }
-alert("8");
+
