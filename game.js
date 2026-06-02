@@ -1,3 +1,4 @@
+alert("game.js carregou");
 let deck;
 let communityCards = [];
 
